@@ -84,3 +84,7 @@ body {
 .embla__slide:not(.is-snapped) {
   opacity: 0.16;
 }
+
+::selection {
+  @apply bg-primary-foreground text-emerald-500;
+}
