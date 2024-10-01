@@ -1,20 +1,8 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import { Recursive } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
 import Header from "@/components/resuables/Header";
-
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
 
 const recursive = Recursive({
   subsets: ["latin"],
@@ -42,13 +30,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        // ${geistSans.className}
-        // ${geistMono.className}
-        className={`
-          ${recursive.className}
-          antialiased`}
-      >
+      <body className={`${recursive.className} antialiased`}>
         <div className="fixed -z-50  min-h-screen w-full dark:bg-black bg-zinc-200  dark:bg-grid-small-white/[0.2] bg-grid-small-black/[0.2] flex items-center justify-center">
           <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-zinc-200 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
         </div>

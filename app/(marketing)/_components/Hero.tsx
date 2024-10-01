@@ -1,5 +1,4 @@
 import { HoverBorderGradient } from "@/components/ace/hover-border-gradient";
-import { Sparkles } from "@/components/animated/Sparkles";
 import { ImageCarousel } from "@/components/ImageCarousel";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import React from "react";
@@ -39,7 +38,7 @@ const Hero = () => {
       </div>
 
       {/* Sparkle Effect */}
-      <div className="hidden dark:block  relative -mt-16 h-32  overflow-hidden [mask-image:radial-gradient(50%_50%,white,transparent)] before:absolute before:inset-0 before:bg-[radial-gradient(circle_at_bottom_center,#327,transparent_90%)] before:opacity-40 after:absolute after:-left-1/2 after:top-1/2 after:aspect-[1/0.7] after:w-[200%] after:rounded-[10%] after:border-t after:border-[#163474] after:bg-[#08132b]">
+      {/* <div className="hidden dark:block  relative -mt-16 h-32  overflow-hidden [mask-image:radial-gradient(50%_50%,white,transparent)] before:absolute before:inset-0 before:bg-[radial-gradient(circle_at_bottom_center,#327,transparent_90%)] before:opacity-40 after:absolute after:-left-1/2 after:top-1/2 after:aspect-[1/0.7] after:w-[200%] after:rounded-[10%] after:border-t after:border-[#163474] after:bg-[#08132b]">
         <Sparkles
           density={1000}
           speed={2}
@@ -49,7 +48,7 @@ const Hero = () => {
           color="#32A7"
           className="absolute inset-x-0 bottom-0 h-full w-full "
         />
-      </div>
+      </div> */}
     </>
   );
 };
