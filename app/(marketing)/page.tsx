@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import Hero from "./_components/Hero";
 import Products from "./_components/Products";
 import Features from "./_components/Features";
+import Footer from "@/components/resuables/Footer";
 
 const HomePage = () => {
   const [loading, setLoading] = useState(false);
@@ -25,6 +26,8 @@ const HomePage = () => {
       <Hero />
       <Products />
       <Features />
+      <hr className="dark:h-px h-[2px] bg-foreground" />
+      <Footer />
     </div>
   );
 };

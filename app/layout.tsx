@@ -44,6 +44,9 @@ export default function RootLayout({
           <main className="relative z-10">
             <Header />
             <section className="max-w-screen-2xl mx-auto ">{children}</section>
+            <footer className="w-full text-center py-3 bg-secondary">
+              All rights reserved &copy; {new Date().getFullYear()} Kautuka
+            </footer>
           </main>
         </ThemeProvider>
       </body>

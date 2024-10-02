@@ -31,18 +31,19 @@ const Features = () => {
           </p>
         </div>
 
+        <div className="bg-gradient-to-b from-amber-500 to-emerald-600 size-40 absolute blur-[100px] left-[45%] top-[30%]" />
+
         {/* Cards */}
         <div className="mx-auto max-w-2xl lg:max-w-4xl max-sm:mt-10  relative">
-          <div className="bg-gradient-to-b from-amber-500 to-emerald-600 size-20 absolute blur-[100px] left-[40%] top-[30%]" />
-          <div className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 md:max-w-none md:grid-cols-2 md:gap-y-16">
+          <div className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 md:max-w-none md:grid-cols-2 md:gap-y-6">
             {features.map((feature, index) => (
               <div
-                className="relative pl-16 backdrop-blur backdrop-saturate-200 backdrop-brightness-200  p-3 rounded-xl"
+                className="relative pl-16 backdrop-blur backdrop-saturate-200 backdrop-brightness-200  p-3 rounded-xl border border-primary/10"
                 key={index}
               >
                 <div className="text-base font-semibold leading-7">
-                  <div className="bg-primary absolute left-3 top-4 flex size-10 items-center justify-center rounded-lg">
-                    <feature.icon className="size-6 text-secondary" />
+                  <div className="bg-primary absolute left-3 top-4 flex size-10 items-center justify-center rounded-lg bg-emerald-600">
+                    <feature.icon className="size-6 text-white" />
                   </div>
                   {feature.name}
                 </div>

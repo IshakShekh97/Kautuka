@@ -1,28 +1,28 @@
-import { CloudRain, Fingerprint, PersonStanding, Zap } from "lucide-react";
+import { PersonStanding, ReceiptIndianRupee, Shirt, Zap } from "lucide-react";
 
 export const features = [
   {
-    name: "Get Started For Free",
+    name: "Cash On Delivery",
     description:
-      "Sign up today and start your blogging journey without any cost. Enjoy all the basic features for free and upgrade anytime as your needs grow.",
-    icon: CloudRain,
+      "Experience hassle-free shopping with our Cash on Delivery option! No need to worry about online transactions, simply order your favorite tees and pay when they arrive at your doorstep.",
+    icon: ReceiptIndianRupee,
   },
   {
-    name: "Blazing Fast",
+    name: "Premium Quality Fabric",
     description:
-      "    Experience lightning-fast performance with our optimized platform. Your blog will load quickly, ensuring a seamless experience for your readers.",
+      "Wear the best, feel the best! Our t-shirts are crafted from ultra-soft, high-quality fabrics that ensure maximum comfort and durability. Your style deserves nothing less!",
+    icon: Shirt,
+  },
+  {
+    name: "Fast & Reliable Shipping",
+    description:
+      "Get your tees delivered swiftly to your doorstep! Our reliable shipping partners ensure timely delivery, so you can rock your new look without the wait.",
     icon: Zap,
   },
   {
-    name: "Super Secured",
+    name: "Secure Checkout",
     description:
-      "Your blog's security is our top priority. We use state-of-the-art security measures to protect your data and ensure your content is safe from unauthorized access.",
-    icon: Fingerprint,
-  },
-  {
-    name: "Easy To Use",
-    description:
-      "Designed with simplicity in mind, our platform is intuitive and user-friendly. Whether you're a beginner or a seasoned blogger, you'll find it easy to navigate and use.",
+      "Shop with confidence knowing our site uses security measures,  to safeguard your transactions and personal data",
     icon: PersonStanding,
   },
 ];
@@ -57,5 +57,96 @@ export const staticImages = [
     imageUrl: "/images/shirt-6.jpg",
     alt: "Shirt 6",
     idx: 5,
+  },
+];
+
+export const navLinks = [
+  {
+    name: "Home",
+    href: "/",
+    idx: 0,
+  },
+  {
+    name: "Shop",
+    href: "/shop",
+    idx: 1,
+  },
+  {
+    name: "About",
+    href: "/about",
+    idx: 2,
+  },
+  {
+    name: "Contact",
+    href: "/contact",
+    idx: 3,
+  },
+];
+export const legalLinks = [
+  {
+    name: "Privacy Policy",
+    href: "/privacy",
+    idx: 0,
+  },
+  {
+    name: "Terms & Conditions",
+    href: "/terms",
+    idx: 1,
+  },
+  {
+    name: "Refund Policy",
+    href: "/refund",
+    idx: 2,
+  },
+  {
+    name: "Shipping Policy",
+    href: "/shipping",
+    idx: 3,
+  },
+];
+
+export const socialLinks = [
+  {
+    name: "Facebook",
+    href: "https://facebook.com",
+    idx: 0,
+  },
+  {
+    name: "Instagram",
+    href: "https://instagram.com",
+    idx: 1,
+  },
+  {
+    name: "Twitter",
+    href: "https://twitter.com",
+    idx: 2,
+  },
+  {
+    name: "LinkedIn",
+    href: "https://linkedin.com",
+    idx: 3,
+  },
+];
+
+export const contactLinks = [
+  {
+    name: "Email",
+    href: "mailto:shekhishak90@gamil.com",
+    idx: 0,
+  },
+  {
+    name: "Phone",
+    href: "tel:+91800000000",
+    idx: 1,
+  },
+  {
+    name: "Address",
+    href: "https://goo.gl/maps/6Qv5bq7y1P9f3b8R7",
+    idx: 2,
+  },
+  {
+    name: "Chat",
+    href: "https://wa.me/+91800000000",
+    idx: 3,
   },
 ];
