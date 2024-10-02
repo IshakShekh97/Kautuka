@@ -1,4 +1,5 @@
 import { HoverBorderGradient } from "@/components/ace/hover-border-gradient";
+import { SparklesCore } from "@/components/ace/sparkles";
 import { ImageCarousel } from "@/components/ImageCarousel";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import React from "react";
@@ -6,7 +7,7 @@ import React from "react";
 const Hero = () => {
   return (
     <>
-      <div className="flex flex-col md:flex-row justify-center h-screen w-full md:pt-44 pt-32">
+      <div className="flex flex-col md:flex-row justify-center h-screen w-full md:pt-44 pt-32 relative">
         {/* Left Side */}
         <div className="size-full flex flex-col md:items-start items-center pt-20 gap-6 px-3 sm:px-6 md:px-9  ">
           <span className="flex items-center justify-center gap-2 underline underline-offset-4 font-semibold">
@@ -35,20 +36,30 @@ const Hero = () => {
         <div className="flex  justify-center h-fit  w-full pt-20">
           <ImageCarousel />
         </div>
-      </div>
 
-      {/* Sparkle Effect */}
-      {/* <div className="hidden dark:block  relative -mt-16 h-32  overflow-hidden [mask-image:radial-gradient(50%_50%,white,transparent)] before:absolute before:inset-0 before:bg-[radial-gradient(circle_at_bottom_center,#327,transparent_90%)] before:opacity-40 after:absolute after:-left-1/2 after:top-1/2 after:aspect-[1/0.7] after:w-[200%] after:rounded-[10%] after:border-t after:border-[#163474] after:bg-[#08132b]">
-        <Sparkles
-          density={1000}
-          speed={2}
-          size={2.1}
-          direction="top"
-          opacitySpeed={2}
-          color="#32A7"
-          className="absolute inset-x-0 bottom-0 h-full w-full "
-        />
-      </div> */}
+        {/* Sparkle Effect */}
+        <div className="w-full h-40 bottom-0 rotate-180  absolute -z-10">
+          <SparklesCore
+            background="transparent"
+            minSize={0.4}
+            maxSize={1}
+            particleDensity={1200}
+            className="w-full h-full hidden dark:block"
+            particleColor="#34d339"
+          />
+          <SparklesCore
+            background="transparent"
+            minSize={0.4}
+            maxSize={2}
+            particleDensity={1200}
+            className="w-full h-full dark:hidden"
+            particleColor="#065f46"
+          />
+
+          {/* Radial Gradient to prevent sharp edges */}
+          <div className="absolute inset-0 text-emerald-400   dark:bg-black bg-zinc-200 [mask-image:radial-gradient(600px_200px_at_top,transparent_20%,white)]"></div>
+        </div>
+      </div>
     </>
   );
 };

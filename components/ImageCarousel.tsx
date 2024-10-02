@@ -13,22 +13,32 @@ export function ImageCarousel() {
     {
       imageUrl: "/images/shirt-1.webp",
       alt: "Shirt 1",
-      idx: 1,
+      idx: 0,
     },
     {
       imageUrl: "/images/shirt-2.webp",
       alt: "Shirt 2",
-      idx: 2,
+      idx: 1,
     },
     {
       imageUrl: "/images/shirt-3.webp",
       alt: "Shirt 3",
-      idx: 3,
+      idx: 2,
     },
     {
       imageUrl: "/images/shirt-4.webp",
       alt: "Shirt 4",
+      idx: 3,
+    },
+    {
+      imageUrl: "/images/shirt-5.webp",
+      alt: "Shirt 5",
       idx: 4,
+    },
+    {
+      imageUrl: "/images/shirt-6.jpg",
+      alt: "Shirt 6",
+      idx: 5,
     },
   ];
 
