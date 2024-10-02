@@ -1,11 +1,17 @@
 import { contactLinks, legalLinks, navLinks, socialLinks } from "@/constants";
 import Link from "next/link";
-import React from "react";
+
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 const Footer = () => {
   return (
-    <div className="h-60  w-full">
-      <div className="flex items-center justify-evenly md:max-w-screen-2xl mx-auto font-bold">
+    <div className="md:h-60   w-full">
+      <div className="hidden md:flex items-center justify-evenly md:max-w-screen-2xl mx-auto font-bold">
         <div className="flex flex-col">
           <h1 className="text-2xl font-extrabold pt-8 pb-4">Navigation</h1>
           <div className="flex flex-col gap-1">
@@ -62,6 +68,96 @@ const Footer = () => {
             ))}
           </div>
         </div>
+      </div>
+      <div className="md:hidden flex flex-col justify-center  px-3">
+        <Accordion
+          className="bg-secondary px-3 mt-2 rounded-md"
+          type="single"
+          collapsible
+        >
+          <AccordionItem value="item-1">
+            <AccordionTrigger>Navigation </AccordionTrigger>
+            {navLinks.map((link) => (
+              <AccordionContent
+                className="bg-background px-4 py-2 rounded-md mb-3 "
+                key={link.idx}
+              >
+                <Link
+                  href={link.href}
+                  className="hover:underline underline-offset-2 w-fit"
+                >
+                  {link.name}
+                </Link>
+              </AccordionContent>
+            ))}
+          </AccordionItem>
+        </Accordion>
+        <Accordion
+          className="bg-secondary px-3 mt-2 rounded-md"
+          type="single"
+          collapsible
+        >
+          <AccordionItem value="item-1">
+            <AccordionTrigger>Legals</AccordionTrigger>
+            {legalLinks.map((link) => (
+              <AccordionContent
+                className="bg-background px-4 py-2 rounded-md mb-3 "
+                key={link.idx}
+              >
+                <Link
+                  href={link.href}
+                  className="hover:underline underline-offset-2 w-fit"
+                >
+                  {link.name}
+                </Link>
+              </AccordionContent>
+            ))}
+          </AccordionItem>
+        </Accordion>
+        <Accordion
+          className="bg-secondary px-3 mt-2 rounded-md"
+          type="single"
+          collapsible
+        >
+          <AccordionItem value="item-1">
+            <AccordionTrigger>Contact Us</AccordionTrigger>
+            {contactLinks.map((link) => (
+              <AccordionContent
+                className="bg-background px-4 py-2 rounded-md mb-3 "
+                key={link.idx}
+              >
+                <Link
+                  href={link.href}
+                  className="hover:underline underline-offset-2 w-fit"
+                >
+                  {link.name}
+                </Link>
+              </AccordionContent>
+            ))}
+          </AccordionItem>
+        </Accordion>
+        <Accordion
+          className="bg-secondary px-3 mt-2 rounded-md mb-3"
+          type="single"
+          collapsible
+        >
+          <AccordionItem value="item-1">
+            <AccordionTrigger>Socials</AccordionTrigger>
+            {socialLinks.map((link) => (
+              <AccordionContent
+                className="bg-background px-4 py-2 rounded-md mb-3 "
+                key={link.idx}
+              >
+                <Link
+                  href={link.href}
+                  className="hover:underline underline-offset-2 w-fit"
+                >
+                  {link.name}
+                </Link>
+              </AccordionContent>
+            ))}
+          </AccordionItem>
+        </Accordion>
       </div>
     </div>
   );
