@@ -7,7 +7,7 @@ import React from "react";
 const Hero = () => {
   return (
     <>
-      <div className="flex flex-col md:flex-row justify-center h-screen w-full md:pt-44 pt-32 relative">
+      <div className="flex flex-col md:flex-row justify-center h-screen w-full md:pt-44 pt-44  relative">
         {/* Left Side */}
         <div className="size-full flex flex-col md:items-start items-center pt-20 gap-6 px-3 sm:px-6 md:px-9  ">
           <span className="flex items-center justify-center gap-2 underline underline-offset-4 font-semibold">
@@ -33,7 +33,7 @@ const Hero = () => {
         </div>
 
         {/* Right Side */}
-        <div className="flex  justify-center h-fit  w-full pt-20">
+        <div className="flex  justify-center h-fit  w-full sm:pt-10 md:pt-20">
           <ImageCarousel />
         </div>
 

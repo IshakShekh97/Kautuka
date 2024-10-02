@@ -45,7 +45,7 @@ const Products = () => {
         />
 
         {/* Product ccards */}
-        <div className="pt-32 flex items-center justify-center flex-wrap gap-5">
+        <div className="pt-32 flex items-center justify-center flex-wrap gap-2 sm:gap-5">
           {images.map((image) => (
             <ProductCard
               key={image.idx}
