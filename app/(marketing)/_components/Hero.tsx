@@ -9,7 +9,7 @@ const Hero = () => {
     <>
       <div className="flex flex-col md:flex-row justify-center h-screen w-full md:pt-44 pt-44  relative">
         {/* Left Side */}
-        <div className="size-full flex flex-col md:items-start items-center pt-20 gap-6 px-3 sm:px-6 md:px-9  ">
+        <div className="size-full flex flex-col md:items-start items-center  pt-20 gap-6 px-3 sm:px-6 md:px-9  ">
           <span className="flex items-center justify-center gap-2 underline underline-offset-4 font-semibold">
             Kautuka Thread Of <span className="text-emerald-500">Trust</span>
             <ArrowRight className="size-4 " />
