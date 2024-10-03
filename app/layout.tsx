@@ -31,9 +31,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${recursive.className} antialiased`}>
-        <div className="fixed -z-50  min-h-screen w-full dark:bg-black bg-zinc-200  dark:bg-grid-small-white/[0.2] bg-grid-small-black/[0.2] flex items-center justify-center">
-          <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-zinc-200 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
-        </div>
+        {/* <div className="fixed -z-50  min-h-screen w-full dark:bg-black bg-zinc-200  dark:bg-grid-small-white/[0.2] bg-grid-small-black/[0.2] flex items-center justify-center">
+        </div> */}
 
         <ThemeProvider
           attribute="class"
@@ -41,9 +40,10 @@ export default function RootLayout({
           disableTransitionOnChange
           enableSystem
         >
-          <main className="relative z-10">
+          <main className="relative z-10 min-h-screen w-full dark:bg-black bg-zinc-200  dark:bg-grid-small-white/[0.2] bg-grid-small-black/[0.2] ">
+            <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-zinc-200 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] -z-50"></div>
             <Header />
-            <section className="max-w-screen-2xl mx-auto ">{children}</section>
+            <section className="max-w-screen-2xl mx-auto">{children}</section>
             <footer className="w-full text-center py-3 bg-secondary">
               All rights reserved &copy; {new Date().getFullYear()} Kautuka
             </footer>

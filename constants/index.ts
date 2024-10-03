@@ -68,7 +68,7 @@ export const navLinks = [
   },
   {
     name: "Shop",
-    href: "/shop",
+    href: "/products",
     idx: 1,
   },
   {
@@ -82,6 +82,7 @@ export const navLinks = [
     idx: 3,
   },
 ];
+
 export const legalLinks = [
   {
     name: "Privacy Policy",
@@ -148,5 +149,36 @@ export const contactLinks = [
     name: "Chat",
     href: "https://wa.me/+91800000000",
     idx: 3,
+  },
+];
+
+export const tags = [
+  {
+    name: "Casual",
+    idx: 0,
+  },
+  {
+    name: "Cotton",
+    idx: 1,
+  },
+  {
+    name: "Oveersized",
+    idx: 2,
+  },
+  {
+    name: "Doodel Art",
+    idx: 3,
+  },
+  {
+    name: "Comfort",
+    idx: 4,
+  },
+  {
+    name: "Cool",
+    idx: 5,
+  },
+  {
+    name: "Cotton Blend",
+    idx: 6,
   },
 ];

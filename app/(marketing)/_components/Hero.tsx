@@ -2,12 +2,13 @@ import { HoverBorderGradient } from "@/components/ace/hover-border-gradient";
 import { SparklesCore } from "@/components/ace/sparkles";
 import { ImageCarousel } from "@/components/ImageCarousel";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
+import Link from "next/link";
 import React from "react";
 
 const Hero = () => {
   return (
     <>
-      <div className="flex flex-col md:flex-row justify-center h-screen w-full md:pt-44 pt-44  relative">
+      <div className="flex flex-col md:flex-row justify-center h-screen w-full md:pt-44 pt-60  relative">
         {/* Left Side */}
         <div className="size-full flex flex-col md:items-start items-center  pt-20 gap-6 px-3 sm:px-6 md:px-9  ">
           <span className="flex items-center justify-center gap-2 underline underline-offset-4 font-semibold">
@@ -21,15 +22,18 @@ const Hero = () => {
             </span>{" "}
             Weaves The Future .
           </h1>
-          <HoverBorderGradient
-            containerClassName="rounded-full"
-            as="button"
-            className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
-          >
-            <span className="w-full flex gap-2 items-center justify-center font-bold">
-              Start Shopping <ArrowUpRight className="size-6" />{" "}
-            </span>
-          </HoverBorderGradient>
+
+          <Link href={"/products"}>
+            <HoverBorderGradient
+              containerClassName="rounded-full"
+              as="button"
+              className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
+            >
+              <span className="w-full flex gap-2 items-center justify-center font-bold">
+                Start Shopping <ArrowUpRight className="size-6" />{" "}
+              </span>
+            </HoverBorderGradient>
+          </Link>
         </div>
 
         {/* Right Side */}

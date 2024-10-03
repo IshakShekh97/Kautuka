@@ -1,6 +1,7 @@
 import { TextGenerateEffect } from "@/components/ace/text-generate-effect";
 import ProductCard from "@/components/resuables/ProductCard";
 import { staticImages } from "@/constants";
+import Link from "next/link";
 import React from "react";
 
 const Products = () => {
@@ -15,11 +16,9 @@ const Products = () => {
         {/* Product ccards */}
         <div className="pt-32 flex items-center justify-center flex-wrap gap-2 sm:gap-5">
           {staticImages.map((image) => (
-            <ProductCard
-              key={image.idx}
-              imageAlt={image.alt}
-              imageUrl={image.imageUrl}
-            />
+            <Link key={image.idx} href={`/products/${image.idx + 1}`}>
+              <ProductCard imageAlt={image.alt} imageUrl={image.imageUrl} />
+            </Link>
           ))}
         </div>
       </div>
