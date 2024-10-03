@@ -182,3 +182,30 @@ export const tags = [
     idx: 6,
   },
 ];
+
+export const productfeatures = [
+  {
+    name: "Cash On Delivery",
+    description:
+      "Experience hassle-free shopping with our Cash on Delivery option! No need to worry about online transactions, simply order your favorite tees and pay when they arrive at your doorstep.",
+    icon: ReceiptIndianRupee,
+  },
+  {
+    name: "Premium Quality Fabric",
+    description:
+      "Wear the best, feel the best! Our t-shirts are crafted from ultra-soft, high-quality fabrics that ensure maximum comfort and durability. Your style deserves nothing less!",
+    icon: Shirt,
+  },
+  {
+    name: "Fast & Reliable Shipping",
+    description:
+      "Get your tees delivered swiftly to your doorstep! Our reliable shipping partners ensure timely delivery, so you can rock your new look without the wait.",
+    icon: Zap,
+  },
+  {
+    name: "Secure Checkout",
+    description:
+      "Shop with confidence knowing our site uses security measures,  to safeguard your transactions and personal data",
+    icon: PersonStanding,
+  },
+];
