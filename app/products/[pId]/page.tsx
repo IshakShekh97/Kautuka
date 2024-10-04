@@ -1,12 +1,14 @@
+"use client";
 import GoBackBtn from "@/components/resuables/GoBackBtn";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { tags } from "@/constants";
+import { productfeatures, staticImages, tags } from "@/constants";
+import { cn } from "@/lib/utils";
 import { IndianRupee, ShoppingBag, ShoppingCart } from "lucide-react";
 
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 
 const ProductPage = ({
   params,
@@ -15,6 +17,9 @@ const ProductPage = ({
     pId: string;
   };
 }) => {
+  const [image, setImage] = useState<string | undefined>(
+    `/images/shirt-${params.pId}.webp`
+  );
   const isInStock = true;
 
   return (
@@ -24,7 +29,7 @@ const ProductPage = ({
         <Card className="w-full md:w-[70%] md:h-[50rem] h-[25rem] md:p-10 p-3 ">
           <div className="md:h-[100%] h-full w-full overflow-hidden relative rounded-md">
             <Image
-              src={`/images/shirt-${params.pId}.webp`}
+              src={image as string}
               alt={params.pId}
               fill
               className="w-full object-cover"
@@ -33,8 +38,29 @@ const ProductPage = ({
         </Card>
         <div className="size-full py-5 px-4 md:px-10 md:py-8 ">
           <div className="flex flex-col">
+            {/* Prioduct Images */}
+
+            <div className="flex flex-wrap gap-4 items-center justify-center md:max-w-[75%] ">
+              {staticImages.map((img) => (
+                <Image
+                  onClick={() => setImage(img.imageUrl)}
+                  key={img.idx}
+                  src={img.imageUrl}
+                  alt={img.alt}
+                  height={100}
+                  width={100}
+                  className={cn(
+                    "w-20 h-20 object-cover rounded-md cursor-pointer",
+                    image === img.imageUrl
+                      ? "border-2 border-primary"
+                      : "opacity-60"
+                  )}
+                />
+              ))}
+            </div>
+
             {/* Product Heading */}
-            <h1 className="md:text-5xl text-3xl font-bold text-pretty md:max-w-[75%]">
+            <h1 className="md:text-5xl pt-5 text-3xl font-bold text-pretty md:max-w-[75%]">
               Oversized Cotton T-Shirt
             </h1>
             {/* Product Description */}
@@ -95,21 +121,18 @@ const ProductPage = ({
               </Button>
             </div>
             {/* Product Cards*/}
-            {/* <div className="flex md:max-w-[75%] pt-5">
-              <div className="flex items-center justify-center flex-wrap gap-2">
+            <div className="flex md:max-w-[75%] pt-5 overflow-hidden">
+              <div className="flex  gap-2 w-[100%] py-5  max-md:overflow-x-auto ">
                 {productfeatures.map((feature) => (
-                  <Card
-                    key={feature.name}
-                    className="flex gap-2 items-center size-28 p-3 flex-col"
-                  >
-                    <feature.icon />
-                    <p className="text-sm text-muted-foreground">
+                  <Card key={feature.name} className="flex gap-2 w-40 p-3">
+                    <feature.icon className="size-7" />
+                    <span className="text-sm text-muted-foreground">
                       {feature.name}
-                    </p>
+                    </span>
                   </Card>
                 ))}
               </div>
-            </div> */}
+            </div>
           </div>
         </div>
       </div>

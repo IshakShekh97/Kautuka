@@ -2,7 +2,6 @@ import Hero from "./_components/Hero";
 import Products from "./_components/Products";
 import Features from "./_components/Features";
 import Footer from "@/components/resuables/Footer";
-
 const HomePage = () => {
   return (
     <div>
@@ -10,7 +9,7 @@ const HomePage = () => {
       <Products />
       <Features />
       <hr className="dark:h-px h-[2px] bg-foreground" />
-      <Footer />
+      <Footer className="pb-5" />
     </div>
   );
 };

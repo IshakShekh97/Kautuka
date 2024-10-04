@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const AllProductsPage = () => {
   return (
-    <div className="min-h-screen w-full max-md:px-5 flex flex-col md:pb-10 ">
+    <div className="h-full w-full max-md:px-5 flex flex-col">
       <GoBackBtn herf="/" btnText="Go Back To HomePage" />
 
       <div className="flex max-md:items-center max-md:justify-center  flex-wrap gap-2 sm:gap-5">

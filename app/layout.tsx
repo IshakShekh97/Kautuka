@@ -3,6 +3,8 @@ import { Recursive } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
 import Header from "@/components/resuables/Header";
+import { Suspense } from "react";
+import Loading from "./Loading";
 
 const recursive = Recursive({
   subsets: ["latin"],
@@ -40,14 +42,16 @@ export default function RootLayout({
           disableTransitionOnChange
           enableSystem
         >
-          <main className="relative z-10 min-h-screen w-full dark:bg-black bg-zinc-200  dark:bg-grid-small-white/[0.2] bg-grid-small-black/[0.2] ">
-            <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-zinc-200 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] -z-50"></div>
-            <Header />
-            <section className="max-w-screen-2xl mx-auto">{children}</section>
-            <footer className="w-full text-center py-3 bg-secondary">
-              All rights reserved &copy; {new Date().getFullYear()} Kautuka
-            </footer>
-          </main>
+          <Suspense fallback={<Loading />}>
+            <main className="relative z-10 min-h-screen w-full dark:bg-black bg-zinc-200  dark:bg-grid-small-white/[0.2] bg-grid-small-black/[0.2] ">
+              <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-zinc-200 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] -z-50"></div>
+              <Header />
+              <section className="max-w-screen-2xl mx-auto">{children}</section>
+              <footer className="w-full text-center py-3 bg-secondary  absolute bottom-0">
+                All rights reserved &copy; {new Date().getFullYear()} Kautuka
+              </footer>
+            </main>
+          </Suspense>
         </ThemeProvider>
       </body>
     </html>
