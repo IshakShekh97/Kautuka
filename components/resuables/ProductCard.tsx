@@ -9,7 +9,8 @@ import {
 } from "@/components/ui/card";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, ShoppingCart } from "lucide-react";
+import { ExternalLink, ShoppingCart, ShoppingCartIcon } from "lucide-react";
+import Link from "next/link";
 
 interface ProductCardProps {
   title?: string;
@@ -26,7 +27,7 @@ const ProductCard = ({
 }: ProductCardProps) => {
   return (
     <>
-      <Card className="sm:max-w-[350px] max-w-[150px]">
+      <Card className="sm:max-w-[350px] max-w-[150px] sm:block hidden">
         <CardHeader className="max-sm:hidden">
           <CardTitle className="text-base">
             {title ? title : <p>OverSized Tee</p>}
@@ -76,6 +77,37 @@ const ProductCard = ({
             <ExternalLink className="size-4" />
           </Button>
         </CardFooter>
+      </Card>
+
+      <Card className="sm:hidden flex flex-col p-1 w-44 h-fit relative">
+        {/* Image */}
+        <div className="relative  rounded-lg overflow-hidden w-full h-[12rem]">
+          <Image
+            src={(imageUrl as string) || "/images/shirt-1.webp"}
+            alt={imageAlt || "Shirt Image"}
+            fill
+            className="w-full object-cover hover:scale-105 transition-transform"
+          />
+        </div>
+        {/* Cart Icon */}
+        <div className="absolute top-2 right-2 rounded-full bg-primary text-secondary p-2 ">
+          <Link href={"/cart"} className="">
+            <ShoppingCartIcon />
+          </Link>
+        </div>
+        {/* Details */}
+        <div className="h-[20%] py-3 text-pretty px-2">
+          <h1 className="text-xl line-clamp-2 pb-1">
+            {title ? title : <span>OverSized Tee</span>}
+          </h1>
+          <p className="text-xs line-clamp-3 text-muted-foreground">
+            {description ? (
+              description
+            ) : (
+              <span>OverSized Tee of Geen Color with awsome Doodle Art</span>
+            )}
+          </p>
+        </div>
       </Card>
     </>
   );

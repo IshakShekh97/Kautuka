@@ -11,7 +11,7 @@ import { cn } from "@/lib/utils";
 
 const Footer = ({ className }: { className?: string }) => {
   return (
-    <div className={cn("md:h-60  w-full", className)}>
+    <div className={cn("md:h-80  w-full", className)}>
       <div className="hidden md:flex items-center justify-evenly md:max-w-screen-2xl mx-auto font-bold">
         <div className="flex flex-col">
           <h1 className="text-2xl font-extrabold pt-8 pb-4">Navigation</h1>
@@ -72,11 +72,11 @@ const Footer = ({ className }: { className?: string }) => {
       </div>
       <div className="md:hidden flex flex-col justify-center px-3 pb-10">
         <Accordion
-          className="bg-secondary px-3 mt-2 rounded-md"
+          className="bg-secondary px-3 mt-2 rounded-md "
           type="single"
           collapsible
         >
-          <AccordionItem value="item-1">
+          <AccordionItem value="item-1" className="">
             <AccordionTrigger>Navigation </AccordionTrigger>
             {navLinks.map((link) => (
               <AccordionContent

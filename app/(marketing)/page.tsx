@@ -9,7 +9,7 @@ const HomePage = () => {
       <Products />
       <Features />
       <hr className="dark:h-px h-[2px] bg-foreground" />
-      <Footer className="pb-5" />
+      <Footer className="max-md:pb-5" />
     </div>
   );
 };

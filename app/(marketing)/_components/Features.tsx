@@ -42,8 +42,8 @@ const Features = () => {
                 key={index}
               >
                 <div className="text-base font-semibold leading-7">
-                  <div className="bg-primary absolute left-3 top-4 flex size-10 items-center justify-center rounded-lg bg-emerald-500">
-                    <feature.icon className="size-6 text-black" />
+                  <div className="bg-emerald-500 text-black absolute left-3 top-4 flex size-10 items-center justify-center rounded-lg">
+                    <feature.icon className="size-6" />
                   </div>
                   {feature.name}
                 </div>

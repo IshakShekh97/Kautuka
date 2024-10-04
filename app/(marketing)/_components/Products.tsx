@@ -14,7 +14,7 @@ const Products = () => {
         />
 
         {/* Product ccards */}
-        <div className="pt-32 flex items-center justify-center flex-wrap gap-2 sm:gap-5">
+        <div className="pt-32 flex flex-wrap items-center justify-center gap-2 sm:gap-5">
           {staticImages.map((image) => (
             <Link key={image.idx} href={`/products/${image.idx + 1}`}>
               <ProductCard imageAlt={image.alt} imageUrl={image.imageUrl} />
